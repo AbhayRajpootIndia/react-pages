@@ -72,16 +72,18 @@ export default function Game (props) {
         <div className="game-page"> 
             {questionComponents}
             
+            {submitted > 0 && <h2 className = "score"> Score: {count}/10 </h2>}
             <div className = "submit-div">
-                {submitted > 0 && <h2 className = "score"> Score: {count}/10 </h2>}
+                
                 {submitted === 0  && <button className = "submit-button" onClick = {submit}> Submit </button>}
                 
+                
                 {submitted > 0 &&
-                 <div className = "submit-exit-div"> 
+                 
                     <button className = "submit-button" onClick = {restart}> Play Again </button>
-                    
-                    <button className = "submit-button" onClick = {() => props.setGameEnd(true)}> Exit Quiz </button>
-                </div>
+                }
+                {submitted > 0 &&  <button className = "submit-button" onClick = {() => props.setGameEnd(true)}> Exit Quiz </button>
+                
                 }
             </div>
             
