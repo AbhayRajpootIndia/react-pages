@@ -117,21 +117,14 @@ body {
 }
 
 .score {
+    text-align: right;
     color: #293264;
-    font-size: 20px;
-    margin-right: 80px;
+    font-size: 30px;
+    margin: 10px 38px;
 }
 
 .submit-div {
-    display: flex;
-    flex-direction: row;
-}
-
-.submit-exit-div {
-    margin: 0px;
-    padding: 0px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: flex-end;
+    margin: 10px;
+    width: 100%;
 }
